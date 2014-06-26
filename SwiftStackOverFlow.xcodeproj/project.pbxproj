@@ -14,6 +14,8 @@
 		A2D7BC5B195CA59D0095608E /* SwiftStackOverFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC5A195CA59D0095608E /* SwiftStackOverFlowTests.swift */; };
 		A2D7BC65195CA6BC0095608E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */; };
 		A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */; };
+		A2D7BC69195CC3E30095608E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC68195CC3E30095608E /* NetworkController.swift */; };
+		A2D7BC6B195CC4010095608E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC6A195CC4010095608E /* AuthController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		A2D7BC5A195CA59D0095608E /* SwiftStackOverFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStackOverFlowTests.swift; sourceTree = "<group>"; };
 		A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSearchViewController.swift; sourceTree = "<group>"; };
+		A2D7BC68195CC3E30095608E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		A2D7BC6A195CC4010095608E /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				A2D7BC4B195CA59D0095608E /* Main.storyboard */,
 				A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */,
 				A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */,
+				A2D7BC68195CC3E30095608E /* NetworkController.swift */,
+				A2D7BC6A195CC4010095608E /* AuthController.swift */,
 				A2D7BC4E195CA59D0095608E /* Images.xcassets */,
 				A2D7BC45195CA59D0095608E /* Supporting Files */,
 			);
@@ -214,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D7BC69195CC3E30095608E /* NetworkController.swift in Sources */,
+				A2D7BC6B195CC4010095608E /* AuthController.swift in Sources */,
 				A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */,
 				A2D7BC4A195CA59D0095608E /* ViewController.swift in Sources */,
 				A2D7BC48195CA59D0095608E /* AppDelegate.swift in Sources */,
