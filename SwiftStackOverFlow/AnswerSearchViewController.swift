@@ -12,6 +12,8 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
     @IBOutlet var tableView : UITableView = nil
     @IBOutlet var searchBar : UISearchBar = nil
     
+    var networkController = NetworkController()
+    var questions = Question[]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +30,27 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
     func searchBarSearchButtonClicked( searchBar: UISearchBar!) {
         searchBar.resignFirstResponder()
         println("\(searchBar.text)")
+        
+        self.networkController.retrieveQuestionsFor(searchBar.text) {(questions: Question[]) in
+        
+            self.questions = questions
+            self.tableView.reloadData()
+        }
     }
     
     // #pragma mark - UITableViewDataSource
     func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return self.questions.count
     }
     
     
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
         
         let cell = tableView!.dequeueReusableCellWithIdentifier("searchAnswersCell", forIndexPath: indexPath) as UITableViewCell
-        
+        let question = self.questions[indexPath!.row]
+        cell.textLabel.text = question.title
         return cell
     }
 

@@ -11,4 +11,46 @@ import Foundation
 
 class NetworkController {
     
+    let apiDomain = "http://api.stackexchange.com/2.2/"
+    let apiSite = "site=stackoverflow"
+    var urlSession : NSURLSession!
+    
+    init(){
+        //setup a standard NSURL Session
+    let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    self.urlSession = NSURLSession(configuration: configuration)
+    }
+    
+    func retrieveQuestionsFor( searchTerm : String, withCompletion completionClosure: (answers :Question[]) -> ()) {
+        
+        var apiEndpoint = "\(self.apiDomain)search?tagged=\(searchTerm)&\(apiSite)"
+        
+        let postDataTask = self.urlSession.dataTaskWithURL(NSURL(string: apiEndpoint)) {
+            (data :NSData!,response: NSURLResponse!, error :NSError!) in
+            
+            if error {
+                println("we got an error!")
+                println(error.localizedDescription)
+            }
+            else {
+            println(response)
+            var jsonError : NSError?
+            var responseJSON = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error:&jsonError) as NSDictionary
+                if jsonError {
+                    println(jsonError!.localizedDescription)
+                }
+                else {
+            var jsonQuestions = responseJSON["items"] as NSMutableArray
+            var questions = Question.questinsFromJSON(jsonQuestions)
+            println(questions)
+                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock() { () in
+
+                        completionClosure(answers: questions)
+                    }
+                }
+            }
+        }
+        postDataTask.resume()
+    }
 }

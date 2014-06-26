@@ -16,6 +16,7 @@
 		A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */; };
 		A2D7BC69195CC3E30095608E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC68195CC3E30095608E /* NetworkController.swift */; };
 		A2D7BC6B195CC4010095608E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC6A195CC4010095608E /* AuthController.swift */; };
+		A2D7BC6D195CCBE20095608E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC6C195CCBE20095608E /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSearchViewController.swift; sourceTree = "<group>"; };
 		A2D7BC68195CC3E30095608E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		A2D7BC6A195CC4010095608E /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		A2D7BC6C195CCBE20095608E /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A2D7BC49195CA59D0095608E /* ViewController.swift */,
 				A2D7BC4B195CA59D0095608E /* Main.storyboard */,
 				A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */,
+				A2D7BC6C195CCBE20095608E /* Question.swift */,
 				A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */,
 				A2D7BC68195CC3E30095608E /* NetworkController.swift */,
 				A2D7BC6A195CC4010095608E /* AuthController.swift */,
@@ -225,6 +228,7 @@
 				A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */,
 				A2D7BC4A195CA59D0095608E /* ViewController.swift in Sources */,
 				A2D7BC48195CA59D0095608E /* AppDelegate.swift in Sources */,
+				A2D7BC6D195CCBE20095608E /* Question.swift in Sources */,
 				A2D7BC65195CA6BC0095608E /* MenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
