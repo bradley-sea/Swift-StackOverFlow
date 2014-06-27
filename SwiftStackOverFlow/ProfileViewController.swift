@@ -19,10 +19,5 @@ class ProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBAction func logInPressed(sender : AnyObject) {
-        
-          }
-    
     
 }
