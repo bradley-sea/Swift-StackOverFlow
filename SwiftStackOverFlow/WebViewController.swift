@@ -49,7 +49,6 @@ class WebViewController: UIViewController,UIWebViewDelegate {
                     self.dismissModalViewControllerAnimated(true)
                 }
             }
-
         }
         return true
     }

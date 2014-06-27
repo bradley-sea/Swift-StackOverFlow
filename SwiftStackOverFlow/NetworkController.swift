@@ -17,12 +17,25 @@ class NetworkController {
     let apiDomain = "http://api.stackexchange.com/2.2/"
     let apiSite = "site=stackoverflow"
     var urlSession : NSURLSession!
-    var token : String?
+    var token : String? {
+    didSet {
+        //prop obserers are not called in an init!
+        NSUserDefaults.standardUserDefaults().setValue(token, forKey: "authToken")
+        println("token saved")
+        println(self.token)
+        println(token)
+        }
+    }
     
     init(){
         //setup a standard NSURL Session
     let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
     self.urlSession = NSURLSession(configuration: configuration)
+        var authToken = NSUserDefaults.standardUserDefaults().valueForKey("authToken") as? String
+        if authToken {
+            self.token = authToken
+            println("token retrieved")
+        }
     }
     
     func retrieveQuestionsFor( searchTerm : String, withCompletion completionClosure: (answers :Question[]) -> ()) {
