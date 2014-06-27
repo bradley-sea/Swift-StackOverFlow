@@ -15,7 +15,6 @@
 		A2D7BC65195CA6BC0095608E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */; };
 		A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */; };
 		A2D7BC69195CC3E30095608E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC68195CC3E30095608E /* NetworkController.swift */; };
-		A2D7BC6B195CC4010095608E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC6A195CC4010095608E /* AuthController.swift */; };
 		A2D7BC6D195CCBE20095608E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC6C195CCBE20095608E /* Question.swift */; };
 		A2D7BC71195CE2260095608E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC70195CE2260095608E /* ProfileViewController.swift */; };
 		A2D7BC75195D07E90095608E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7BC74195D07E90095608E /* WebViewController.swift */; };
@@ -44,7 +43,6 @@
 		A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		A2D7BC66195CAB700095608E /* AnswerSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSearchViewController.swift; sourceTree = "<group>"; };
 		A2D7BC68195CC3E30095608E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
-		A2D7BC6A195CC4010095608E /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		A2D7BC6C195CCBE20095608E /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A2D7BC70195CE2260095608E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2D7BC74195D07E90095608E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				A2D7BC6C195CCBE20095608E /* Question.swift */,
 				A2D7BC64195CA6BC0095608E /* MenuTableViewController.swift */,
 				A2D7BC68195CC3E30095608E /* NetworkController.swift */,
-				A2D7BC6A195CC4010095608E /* AuthController.swift */,
 				A2D7BC4E195CA59D0095608E /* Images.xcassets */,
 				A2D7BC45195CA59D0095608E /* Supporting Files */,
 			);
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D7BC69195CC3E30095608E /* NetworkController.swift in Sources */,
-				A2D7BC6B195CC4010095608E /* AuthController.swift in Sources */,
 				A2D7BC67195CAB700095608E /* AnswerSearchViewController.swift in Sources */,
 				A2D7BC75195D07E90095608E /* WebViewController.swift in Sources */,
 				A2D7BC4A195CA59D0095608E /* ViewController.swift in Sources */,
