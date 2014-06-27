@@ -9,6 +9,7 @@
 import UIKit
 
 class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate {
+    @IBOutlet var logoView : UIView = nil
     @IBOutlet var tableView : UITableView = nil
     @IBOutlet var searchBar : UISearchBar = nil
     
@@ -20,6 +21,10 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        if self.questions.isEmpty {
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +37,7 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         println("\(searchBar.text)")
         
         NetworkController.sharedNetworkController.retrieveQuestionsFor(searchBar.text) {(questions: Question[]) in
+            self.logoView.removeFromSuperview()
             self.questions = questions
             self.tableView.reloadData()
         }

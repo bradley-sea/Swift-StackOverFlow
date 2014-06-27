@@ -113,17 +113,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-31-e7v">
+                                <rect key="frame" x="120" y="120" width="240" height="240"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stackoverflow-logo" translatesAutoresizingMaskIntoConstraints="NO" id="AlG-Lx-hSH">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0SM-Ed-7iK"/>
+                                    <constraint firstAttribute="height" constant="240" id="3eB-bN-5Dd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UK2-ig-LP7" firstAttribute="leading" secondItem="LJg-FK-WOB" secondAttribute="leading" id="99p-4M-Az5"/>
                             <constraint firstItem="tIX-56-CcF" firstAttribute="top" secondItem="UK2-ig-LP7" secondAttribute="bottom" id="L0g-t7-2Jh"/>
                             <constraint firstItem="UK2-ig-LP7" firstAttribute="top" secondItem="LJg-FK-WOB" secondAttribute="top" id="jep-5y-XOV"/>
+                            <constraint firstAttribute="centerY" secondItem="iyU-31-e7v" secondAttribute="centerY" id="pWV-09-Z14"/>
+                            <constraint firstAttribute="centerX" secondItem="iyU-31-e7v" secondAttribute="centerX" id="pYq-YS-ImH"/>
                             <constraint firstAttribute="trailing" secondItem="UK2-ig-LP7" secondAttribute="trailing" id="ugT-x2-9TN"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <connections>
+                        <outlet property="logoView" destination="iyU-31-e7v" id="qi1-w9-b0p"/>
                         <outlet property="searchBar" destination="fqn-Or-Gl4" id="IEG-T5-pXL"/>
                         <outlet property="tableView" destination="UK2-ig-LP7" id="mxA-Xz-hwu"/>
                     </connections>
@@ -281,4 +297,7 @@
             <point key="canvasLocation" x="-68" y="576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stackoverflow-logo" width="1000" height="298"/>
+    </resources>
 </document>
