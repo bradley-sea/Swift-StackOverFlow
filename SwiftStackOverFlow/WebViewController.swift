@@ -47,6 +47,8 @@ class WebViewController: UIViewController,UIWebViewDelegate {
                 var almostThere = stringComponent[1].componentsSeparatedByString("&")
                 var token = almostThere[0]
                 println(token)
+                NetworkController.sharedNetworkController.token = token
+                self.dismissModalViewControllerAnimated(true)
             }
 }
         return true

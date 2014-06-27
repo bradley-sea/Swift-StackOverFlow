@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
-    let menuOptions = ["Search Answers", "My Profile"]
+    let menuOptions = ["Search Questions","Saved Questions", "My Profile"]
     var profileVC :UIViewController!
     var searchAnswersVC : AnswerSearchViewController!
     override func viewDidLoad() {

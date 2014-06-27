@@ -141,7 +141,9 @@
                         <constraints>
                             <constraint firstItem="UK2-ig-LP7" firstAttribute="leading" secondItem="LJg-FK-WOB" secondAttribute="leading" id="99p-4M-Az5"/>
                             <constraint firstItem="tIX-56-CcF" firstAttribute="top" secondItem="UK2-ig-LP7" secondAttribute="bottom" id="L0g-t7-2Jh"/>
-                            <constraint firstItem="UK2-ig-LP7" firstAttribute="top" secondItem="LJg-FK-WOB" secondAttribute="top" id="jep-5y-XOV"/>
+                            <constraint firstItem="UK2-ig-LP7" firstAttribute="top" secondItem="LJg-FK-WOB" secondAttribute="top" id="jep-5y-XOV">
+                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstAttribute="centerY" secondItem="iyU-31-e7v" secondAttribute="centerY" id="pWV-09-Z14"/>
                             <constraint firstAttribute="centerX" secondItem="iyU-31-e7v" secondAttribute="centerX" id="pYq-YS-ImH"/>
                             <constraint firstAttribute="trailing" secondItem="UK2-ig-LP7" secondAttribute="trailing" id="ugT-x2-9TN"/>
@@ -156,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hy6-Ha-VZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624" y="689"/>
+            <point key="canvasLocation" x="624" y="688.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dGU-U3-Ar4">

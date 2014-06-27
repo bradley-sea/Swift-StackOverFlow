@@ -14,6 +14,7 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
     @IBOutlet var searchBar : UISearchBar = nil
     
     var questions = Question[]()
+    var showingLogo = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,10 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         println("\(searchBar.text)")
         
         NetworkController.sharedNetworkController.retrieveQuestionsFor(searchBar.text) {(questions: Question[]) in
+            if self.showingLogo {
             self.logoView.removeFromSuperview()
+                self.showingLogo = false
+            }
             self.questions = questions
             self.tableView.reloadData()
         }
