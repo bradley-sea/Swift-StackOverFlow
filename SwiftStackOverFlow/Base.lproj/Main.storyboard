@@ -105,6 +105,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="answersLabel" destination="hx8-b8-m4A" id="uYq-aI-SLC"/>
+                                            <outlet property="askedDateLabel" destination="pu4-Pw-BUp" id="Vu6-FT-CNj"/>
+                                            <outlet property="scoreLabel" destination="vXJ-j1-fc6" id="k5p-aY-KTJ"/>
                                             <outlet property="textView" destination="aoc-OK-4aO" id="EGf-Uh-zrs"/>
                                         </connections>
                                     </tableViewCell>

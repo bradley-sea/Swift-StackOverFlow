@@ -51,7 +51,16 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         let cell = tableView!.dequeueReusableCellWithIdentifier("searchAnswersCell", forIndexPath: indexPath) as QuestionTableViewCell
         let question = self.questions[indexPath!.row]
         cell.textView.text = question.title
+        cell.answersLabel.text = "\(question.answerCount)"
+        cell.scoreLabel.text = "\(question.score)"
+        cell.askedDateLabel.text = "Asked on \(question.askDate.description)"
         return cell
+    }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator!) {
+        
+        self.tableView.reloadData()
+        
     }
 
 

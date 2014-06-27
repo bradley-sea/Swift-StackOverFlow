@@ -10,6 +10,9 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
+    @IBOutlet var askedDateLabel : UILabel = nil
+    @IBOutlet var scoreLabel : UILabel = nil
+    @IBOutlet var answersLabel : UILabel = nil
     @IBOutlet var textView : UITextView = nil
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
