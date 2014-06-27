@@ -52,6 +52,10 @@ class WebViewController: UIViewController,UIWebViewDelegate {
         return true
     }
 
+    @IBAction func cancelPressed(sender : AnyObject) {
+        
+        self.dismissModalViewControllerAnimated(true)
+    }
 
     /*
     // #pragma mark - Navigation

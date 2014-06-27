@@ -125,15 +125,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gC-cB-O8j">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                                <rect key="frame" x="0.0" y="44" width="480" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pk-YN-AqR">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yXT-Hr-BSS"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="Fun-5m-Nfw">
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="35J-ai-jSO" id="z1C-AY-3yL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0gC-cB-O8j" firstAttribute="top" secondItem="vTK-1n-QP9" secondAttribute="top" id="2Ye-GE-TB9"/>
                             <constraint firstAttribute="trailing" secondItem="0gC-cB-O8j" secondAttribute="trailing" id="DN4-wk-sRa"/>
+                            <constraint firstItem="9pk-YN-AqR" firstAttribute="top" secondItem="vTK-1n-QP9" secondAttribute="top" id="PiV-G7-gfA"/>
+                            <constraint firstItem="9pk-YN-AqR" firstAttribute="leading" secondItem="vTK-1n-QP9" secondAttribute="leading" id="RsZ-YM-8p9"/>
+                            <constraint firstItem="0gC-cB-O8j" firstAttribute="top" secondItem="9pk-YN-AqR" secondAttribute="bottom" id="eTB-ES-LSe"/>
                             <constraint firstItem="vEK-YE-ZGt" firstAttribute="top" secondItem="0gC-cB-O8j" secondAttribute="bottom" id="gqk-NT-2np"/>
+                            <constraint firstAttribute="trailing" secondItem="9pk-YN-AqR" secondAttribute="trailing" id="nJG-JN-LPt"/>
                             <constraint firstItem="0gC-cB-O8j" firstAttribute="leading" secondItem="vTK-1n-QP9" secondAttribute="leading" id="qEq-EZ-CZ0"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
