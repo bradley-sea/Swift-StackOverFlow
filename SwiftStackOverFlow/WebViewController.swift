@@ -36,21 +36,21 @@ class WebViewController: UIViewController,UIWebViewDelegate {
          navigationType: UIWebViewNavigationType) -> Bool
     
     {
-        for component in request.URL.pathComponents as String[] {
-            
-            if component == "login_success" {
-                //println("greatSuccess")
-                 //println(request.URL.pathComponents)
-                var url = request.description
-                
-                var stringComponent = url.componentsSeparatedByString("=")
-                var almostThere = stringComponent[1].componentsSeparatedByString("&")
-                var token = almostThere[0]
-                println(token)
-                NetworkController.sharedNetworkController.token = token
-                self.dismissModalViewControllerAnimated(true)
+        if request {
+            var requestString = request.URL.description
+            if requestString.rangeOfString("login_success") {
+                if requestString.rangeOfString("expires") {
+                      println("got it")
+                    
+                    let components = requestString.componentsSeparatedByString("=")
+                    let tokenComponents = components[1].componentsSeparatedByString("&")
+                    println(tokenComponents[0])
+                    NetworkController.sharedNetworkController.token = tokenComponents[0]
+                    self.dismissModalViewControllerAnimated(true)
+                }
             }
-}
+
+        }
         return true
     }
 
