@@ -19,6 +19,7 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         self.searchBar.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,9 +48,9 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
     
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
         
-        let cell = tableView!.dequeueReusableCellWithIdentifier("searchAnswersCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView!.dequeueReusableCellWithIdentifier("searchAnswersCell", forIndexPath: indexPath) as QuestionTableViewCell
         let question = self.questions[indexPath!.row]
-        cell.textLabel.text = question.title
+        cell.textView.text = question.title
         return cell
     }
 
