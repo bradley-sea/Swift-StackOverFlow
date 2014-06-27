@@ -12,7 +12,6 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
     @IBOutlet var tableView : UITableView = nil
     @IBOutlet var searchBar : UISearchBar = nil
     
-    var networkController = NetworkController()
     var questions = Question[]()
     
     override func viewDidLoad() {
@@ -31,11 +30,11 @@ class AnswerSearchViewController: UIViewController, UISearchBarDelegate,UITableV
         searchBar.resignFirstResponder()
         println("\(searchBar.text)")
         
-        self.networkController.retrieveQuestionsFor(searchBar.text) {(questions: Question[]) in
-        
+        NetworkController.sharedNetworkController.retrieveQuestionsFor(searchBar.text) {(questions: Question[]) in
             self.questions = questions
             self.tableView.reloadData()
         }
+
     }
     
     // #pragma mark - UITableViewDataSource

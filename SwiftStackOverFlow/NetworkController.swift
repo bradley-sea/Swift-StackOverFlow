@@ -11,14 +11,20 @@ import Foundation
 
 class NetworkController {
     
+    class var sharedNetworkController : NetworkController {
+    return _SingletonSharedInstance
+    }
     let apiDomain = "http://api.stackexchange.com/2.2/"
     let apiSite = "site=stackoverflow"
     var urlSession : NSURLSession!
+    var authController : AuthController!
+    var token : String?
     
     init(){
         //setup a standard NSURL Session
     let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
     self.urlSession = NSURLSession(configuration: configuration)
+        self.authController = AuthController()
     }
     
     func retrieveQuestionsFor( searchTerm : String, withCompletion completionClosure: (answers :Question[]) -> ()) {
@@ -42,7 +48,6 @@ class NetworkController {
                 else {
             var jsonQuestions = responseJSON["items"] as NSMutableArray
             var questions = Question.questinsFromJSON(jsonQuestions)
-            println(questions)
                     
                     NSOperationQueue.mainQueue().addOperationWithBlock() { () in
 
@@ -54,3 +59,5 @@ class NetworkController {
         postDataTask.resume()
     }
 }
+
+let _SingletonSharedInstance = NetworkController()

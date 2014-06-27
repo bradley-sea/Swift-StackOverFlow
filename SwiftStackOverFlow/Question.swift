@@ -24,7 +24,6 @@ class Question {
         
         for jsonQuestion : AnyObject in jsonData {
             var question = Question()
-            println(jsonQuestion)
             question.isAnwsered = jsonQuestion.objectForKey("is_answered") as Int
             question.title = jsonQuestion.objectForKey("title") as String
             question.questionID = jsonQuestion.objectForKey("question_id") as Int
